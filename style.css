@@ -70,6 +70,10 @@ div[class*='container'] {
   z-index: 1;
 }
 
+/*
+ BUTTON ONE
+*/
+
 .btn-one::before,
 .btn-one::after {
   content: '';
@@ -96,7 +100,7 @@ div[class*='container'] {
 .btn-one:hover::before {
   left: 68px;
   width: 64px;
-
+  cursor: pointer;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -117,4 +121,33 @@ div[class*='container'] {
   to {
     transform: rotate(-360deg);
   }
+}
+
+/*
+ BUTTON TWO
+*/
+
+.btn-two::before {
+  transition: transform 0.15s, 0.15s border-radius 0.15s;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(0.1, 0.1);
+  border-radius: 50%;
+}
+
+.btn-two:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.btn-two::after {
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-two:hover::after {
+  opacity: 0;
+  cursor: pointer;
 }
